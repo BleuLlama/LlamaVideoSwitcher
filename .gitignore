@@ -1,3 +1,9 @@
+# Mac stuff
+.DS_Store
+*junk
+junk*
+*.swp
+
 # Prerequisites
 *.d
 
