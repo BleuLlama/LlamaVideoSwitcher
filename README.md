@@ -99,6 +99,8 @@ The additional opcodes that we will look for are:
 
 This should have minimal affect on the game program requirements.
 
+I should note that the 2CM, 3CM wrapper may be unnecessary, initial tests will be without it.
+
 
 # Hardware Design
 
@@ -129,6 +131,13 @@ For the prototype, i had considered a few different ways of building it up:
 		- known to work (years ago)
 		- Probably not the best video quality, but this isn't a concern right now.
 		- I definitely have the parts to make this, and it's super simple
+
+	I implemented first the "El Cheapo #2" version, but it didn't work, so I dug
+	up some 5v reed relays and implemented that version instead... which didn't work
+	at first, but I figured out why it wasn;t working.  In retrospect, the other 
+	circuit probably would have worked, but oh well.
+
+	
 
 # Additional Reference
 

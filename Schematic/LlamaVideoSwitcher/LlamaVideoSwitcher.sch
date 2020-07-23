@@ -7,7 +7,7 @@ encoding utf-8
 Sheet 1 1
 Title "LlamaVideoSwitcher"
 Date "2020-07-23"
-Rev "1.2"
+Rev "1.3"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -36,9 +36,9 @@ F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 5975 1450 50  0001
 	1    5975 1450
 	0    -1   -1   0   
 $EndComp
-Text Notes 7650 1325 0    50   ~ 0
+Text Notes 7625 1250 0    50   ~ 0
 DIN 5/180 pinout\n1 DTR\n4 TX (from IIc)\n2 GND\n5 RX (to IIc)\n3 DSR
-Text Notes 7800 1950 0    50   ~ 0
+Text Notes 7800 1950 0    50   Italic 0
 Notes:\n- Male DIN cable plugs into Apple ][c\n- Female DIN socket is for LD Player connection\n- Apple seems to label their port as 1,2,3,4,5 instead of 1,4,2,5,3\n- For the LD interface, only TX, RX and GND are needed.
 $Comp
 L Connector:DIN-5_180degree J6
@@ -52,7 +52,7 @@ F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 7325 1450 50  0001
 	0    1    -1   0   
 $EndComp
 Wire Wire Line
-	7725 1450 7725 2100
+	7725 1450 7725 2300
 $Comp
 L power:+5V #PWR08
 U 1 1 5F179CC1
@@ -69,91 +69,91 @@ Wire Wire Line
 $Comp
 L power:GND #PWR07
 U 1 1 5F17A22C
-P 5475 5900
-F 0 "#PWR07" H 5475 5650 50  0001 C CNN
-F 1 "GND" H 5480 5727 50  0000 C CNN
-F 2 "" H 5475 5900 50  0001 C CNN
-F 3 "" H 5475 5900 50  0001 C CNN
-	1    5475 5900
+P 5450 5900
+F 0 "#PWR07" H 5450 5650 50  0001 C CNN
+F 1 "GND" H 5455 5727 50  0000 C CNN
+F 2 "" H 5450 5900 50  0001 C CNN
+F 3 "" H 5450 5900 50  0001 C CNN
+	1    5450 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5375 5650 5375 5775
+	5350 5650 5350 5775
 Wire Wire Line
-	5375 5775 5475 5775
+	5350 5775 5450 5775
 Wire Wire Line
-	5575 5775 5575 5650
+	5550 5775 5550 5650
 Wire Wire Line
-	5475 5650 5475 5775
-Connection ~ 5475 5775
+	5450 5650 5450 5775
+Connection ~ 5450 5775
 Wire Wire Line
-	5475 5775 5575 5775
+	5450 5775 5550 5775
 Wire Wire Line
-	5475 5775 5475 5900
+	5450 5775 5450 5900
 $Comp
 L Connector_Generic:Conn_01x04 J3
 U 1 1 5F17B295
-P 3200 3650
-F 0 "J3" H 3120 3967 50  0000 C CNN
-F 1 "Outputs" H 3120 3876 50  0000 C CNN
-F 2 "" H 3200 3650 50  0001 C CNN
-F 3 "~" H 3200 3650 50  0001 C CNN
-	1    3200 3650
+P 3600 3650
+F 0 "J3" H 3520 3967 50  0000 C CNN
+F 1 "Interface" H 3520 3876 50  0000 C CNN
+F 2 "" H 3600 3650 50  0001 C CNN
+F 3 "~" H 3600 3650 50  0001 C CNN
+	1    3600 3650
 	-1   0    0    -1  
 $EndComp
-Text Notes 2800 3850 0    50   ~ 0
+Text Notes 3275 3850 0    50   ~ 0
 1 VCC\n2 TX\n3 RX\n4 GND
 $Comp
 L power:+5V #PWR03
 U 1 1 5F17BE34
-P 3600 3425
-F 0 "#PWR03" H 3600 3275 50  0001 C CNN
-F 1 "+5V" H 3615 3598 50  0000 C CNN
-F 2 "" H 3600 3425 50  0001 C CNN
-F 3 "" H 3600 3425 50  0001 C CNN
-	1    3600 3425
+P 4000 3425
+F 0 "#PWR03" H 4000 3275 50  0001 C CNN
+F 1 "+5V" H 4015 3598 50  0000 C CNN
+F 2 "" H 4000 3425 50  0001 C CNN
+F 3 "" H 4000 3425 50  0001 C CNN
+	1    4000 3425
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 3425 3600 3550
+	4000 3425 4000 3550
 Wire Wire Line
-	3600 3550 3400 3550
+	4000 3550 3800 3550
 $Comp
 L power:GND #PWR04
 U 1 1 5F17C200
-P 3600 3975
-F 0 "#PWR04" H 3600 3725 50  0001 C CNN
-F 1 "GND" H 3605 3802 50  0000 C CNN
-F 2 "" H 3600 3975 50  0001 C CNN
-F 3 "" H 3600 3975 50  0001 C CNN
-	1    3600 3975
+P 4000 3975
+F 0 "#PWR04" H 4000 3725 50  0001 C CNN
+F 1 "GND" H 4005 3802 50  0000 C CNN
+F 2 "" H 4000 3975 50  0001 C CNN
+F 3 "" H 4000 3975 50  0001 C CNN
+	1    4000 3975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 3975 3600 3850
+	4000 3975 4000 3850
 Wire Wire Line
-	3600 3850 3400 3850
-Text Notes 1325 2300 0    50   ~ 0
+	4000 3850 3800 3850
+Text Notes 1350 2700 0    50   ~ 0
 TTL-RS232 Interface
 $Comp
 L Connector:DB9_Female J1
 U 1 1 5F17E150
-P 2400 2650
-F 0 "J1" V 2350 1975 50  0000 L CNN
-F 1 "DB9_Female" V 2450 1600 50  0000 L CNN
-F 2 "" H 2400 2650 50  0001 C CNN
-F 3 " ~" H 2400 2650 50  0001 C CNN
-	1    2400 2650
+P 2400 3075
+F 0 "J1" V 2375 3675 50  0000 L CNN
+F 1 "DB9_Female" V 2500 3575 50  0000 L CNN
+F 2 "" H 2400 3075 50  0001 C CNN
+F 3 " ~" H 2400 3075 50  0001 C CNN
+	1    2400 3075
 	0    -1   1    0   
 $EndComp
-Text Notes 1375 3750 0    50   ~ 0
-DE9 Serial Pinout\n(Male on PC)\n1 CD\n2 RX\n3 TX\n4 DTR\n5 GND\n6 DSR\n7 RTS\n8 CTS\n9 RI
+Text Notes 1700 3975 0    50   ~ 0
+DE9 Serial Pinout\n(Male on PC)\n1 CD\n2 RX\n3 TX\n4 DTR\n5 GND
 $Comp
 L Connector:Conn_Coaxial J7
 U 1 1 5F18184E
 P 9800 3075
 F 0 "J7" H 9700 3300 50  0000 C CNN
-F 1 "Video 0 In" H 9850 3200 50  0000 C CNN
+F 1 "Video 0 In: ][c" H 9850 3200 50  0000 C CNN
 F 2 "" H 9800 3075 50  0001 C CNN
 F 3 " ~" H 9800 3075 50  0001 C CNN
 	1    9800 3075
@@ -185,22 +185,20 @@ Text GLabel 7400 2925 0    50   Input ~ 0
 Vid0Select
 Text GLabel 7400 5225 0    50   Input ~ 0
 Vid1Select
-Text GLabel 4750 4650 0    50   Input ~ 0
+Text GLabel 4750 4550 0    50   Input ~ 0
 Vid0Select
-Text GLabel 4750 4750 0    50   Input ~ 0
+Text GLabel 4750 4650 0    50   Input ~ 0
 Vid1Select
 Wire Wire Line
-	4750 4750 4950 4750
+	4750 4650 4950 4650
 Wire Wire Line
 	4950 4150 4700 4150
 Wire Wire Line
 	4700 4150 4700 3650
 Wire Wire Line
-	3400 3650 4700 3650
+	3800 3650 4700 3650
 Wire Wire Line
 	4600 4250 4600 3750
-Wire Wire Line
-	4600 3750 3400 3750
 $Comp
 L power:+5V #PWR01
 U 1 1 5F1AE724
@@ -255,12 +253,12 @@ F 3 "" H 4025 5600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4025 5600 4025 5450
-Text Notes 2325 3200 0    50   ~ 0
+Text Notes 3000 3150 0    50   Italic 0
 Note: We’re tapping into pin 2 on \nthis interface board.  We’re only\nusing it for level conversion, \nnot its 9 pin connector.
 Wire Bus Line
-	1300 2200 3950 2200
+	1300 2600 4400 2600
 Wire Bus Line
-	3950 4250 1300 4250
+	4400 4250 1300 4250
 Wire Wire Line
 	4025 4450 4025 5050
 Text Notes 1750 5750 0    50   ~ 0
@@ -283,7 +281,7 @@ L Connector:DB9_Female J2
 U 1 1 5F1FA942
 P 2450 7150
 F 0 "J2" H 2370 6458 50  0000 C CNN
-F 1 "DB9_Female (to computer)" H 2370 6549 50  0000 C CNN
+F 1 "DE9 Female (to computer)" H 2370 6549 50  0000 C CNN
 F 2 "" H 2450 7150 50  0001 C CNN
 F 3 " ~" H 2450 7150 50  0001 C CNN
 	1    2450 7150
@@ -294,7 +292,7 @@ L Connector:DB9_Female J4
 U 1 1 5F1FAF34
 P 3950 7150
 F 0 "J4" H 3869 6458 50  0000 C CNN
-F 1 "DB9_Male (to LDP)" H 3869 6549 50  0000 C CNN
+F 1 "DE9 Male (to LDP)" H 3869 6549 50  0000 C CNN
 F 2 "" H 3950 7150 50  0001 C CNN
 F 3 " ~" H 3950 7150 50  0001 C CNN
 	1    3950 7150
@@ -312,23 +310,10 @@ Text Notes 4275 7500 0    50   ~ 0
 1 CD\n2 RX\n3 TX\n4 DTR\n5 GND\n6 DSR\n7 RTS\n8 CTS\n9 RI
 Wire Wire Line
 	2750 6750 3300 6750
-$Comp
-L power:GND #PWR06
-U 1 1 5F20A083
-P 4550 6400
-F 0 "#PWR06" H 4550 6150 50  0001 C CNN
-F 1 "GND" H 4555 6227 50  0000 C CNN
-F 2 "" H 4550 6400 50  0001 C CNN
-F 3 "" H 4550 6400 50  0001 C CNN
-	1    4550 6400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3300 6750 3300 6300
 Wire Wire Line
-	3300 6300 4550 6300
-Wire Wire Line
-	4550 6300 4550 6400
+	3300 6300 3700 6300
 Connection ~ 3300 6750
 Wire Wire Line
 	3300 6750 3650 6750
@@ -349,7 +334,7 @@ Wire Wire Line
 	2750 7450 3650 7450
 Wire Wire Line
 	3650 7550 2750 7550
-Text Notes 1850 7800 0    50   ~ 0
+Text Notes 1850 7800 0    50   Italic 0
 If using a 9 pin cable for the tap instead of Apple ][c DIN, use this.
 $Comp
 L Device:Q_PNP_CBE Q1
@@ -432,7 +417,7 @@ F 3 "" H 8450 2425 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2800 2350 2800 2100
+	2800 2775 2800 2300
 $Comp
 L Device:R R3
 U 1 1 5F1C2622
@@ -478,7 +463,7 @@ L Connector:Conn_Coaxial J9
 U 1 1 5F221A2D
 P 9800 6200
 F 0 "J9" H 9700 6425 50  0000 C CNN
-F 1 "Video 1 In" H 9850 6325 50  0000 C CNN
+F 1 "Video 1 In: LDP" H 9850 6325 50  0000 C CNN
 F 2 "" H 9800 6200 50  0001 C CNN
 F 3 " ~" H 9800 6200 50  0001 C CNN
 	1    9800 6200
@@ -632,65 +617,65 @@ Connection ~ 9300 4550
 $Comp
 L Device:Jumper JP1
 U 1 1 5F19699F
-P 3450 950
-F 0 "JP1" H 3200 1075 50  0000 C CNN
-F 1 "Jumper" H 3675 1075 50  0000 C CNN
-F 2 "" H 3450 950 50  0001 C CNN
-F 3 "~" H 3450 950 50  0001 C CNN
-	1    3450 950 
+P 3450 800
+F 0 "JP1" H 3200 925 50  0000 C CNN
+F 1 "Select A In" H 3450 725 50  0000 C CNN
+F 2 "" H 3450 800 50  0001 C CNN
+F 3 "~" H 3450 800 50  0001 C CNN
+	1    3450 800 
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D1
 U 1 1 5F1A8C96
-P 2850 950
-F 0 "D1" H 2775 1125 50  0000 R CNN
-F 1 "1N4918" H 2975 1050 50  0000 R CNN
-F 2 "" H 2850 950 50  0001 C CNN
-F 3 "~" H 2850 950 50  0001 C CNN
-	1    2850 950 
+P 2850 800
+F 0 "D1" H 2775 975 50  0000 R CNN
+F 1 "1N4918" H 2975 900 50  0000 R CNN
+F 2 "" H 2850 800 50  0001 C CNN
+F 3 "~" H 2850 800 50  0001 C CNN
+	1    2850 800 
 	1    0    0    -1  
 $EndComp
 Wire Bus Line
-	1300 4250 1300 2200
+	1300 4250 1300 2600
 Wire Bus Line
-	3950 2200 3950 4250
+	4400 2600 4400 4250
 Wire Wire Line
 	4950 4250 4600 4250
 Wire Wire Line
 	4950 4450 4025 4450
 Wire Wire Line
-	4950 4650 4750 4650
+	4950 4550 4750 4550
 Wire Wire Line
 	3050 4350 4950 4350
 $Comp
-L Device:Jumper JP2
+L Device:Jumper JP3
 U 1 1 5F2586D3
-P 3450 1450
-F 0 "JP2" H 3200 1575 50  0000 C CNN
-F 1 "Jumper" H 3675 1575 50  0000 C CNN
-F 2 "" H 3450 1450 50  0001 C CNN
-F 3 "~" H 3450 1450 50  0001 C CNN
-	1    3450 1450
+P 3450 1650
+F 0 "JP3" H 3200 1775 50  0000 C CNN
+F 1 "Select B In" H 3450 1575 50  0000 C CNN
+F 2 "" H 3450 1650 50  0001 C CNN
+F 3 "~" H 3450 1650 50  0001 C CNN
+	1    3450 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 5F2586D9
-P 2850 1450
-F 0 "D2" H 2775 1625 50  0000 R CNN
-F 1 "1N4918" H 2975 1550 50  0000 R CNN
-F 2 "" H 2850 1450 50  0001 C CNN
-F 3 "~" H 2850 1450 50  0001 C CNN
-	1    2850 1450
+P 2850 1650
+F 0 "D2" H 2775 1825 50  0000 R CNN
+F 1 "1N4918" H 2975 1750 50  0000 R CNN
+F 2 "" H 2850 1650 50  0001 C CNN
+F 3 "~" H 2850 1650 50  0001 C CNN
+	1    2850 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3000 950  3150 950 
+	3000 800  3150 800 
 Wire Wire Line
-	2700 1450 2200 1450
+	2700 1650 2200 1650
 Wire Wire Line
-	3000 1450 3150 1450
+	3000 1650 3150 1650
 Wire Wire Line
 	7725 1450 7625 1450
 Wire Wire Line
@@ -714,24 +699,22 @@ Wire Wire Line
 Wire Wire Line
 	7325 1050 7325 1150
 Wire Wire Line
-	7425 1150 7425 950 
+	7425 1150 7425 800 
 Wire Wire Line
-	7425 950  5875 950 
+	7425 800  5875 800 
 Wire Wire Line
-	5875 950  5875 1150
+	5875 800  5875 1150
 Wire Wire Line
-	3750 950  3900 950 
+	3750 800  3900 800 
 Wire Wire Line
-	2800 2100 5575 2100
+	2800 2300 5575 2300
 Wire Wire Line
-	5575 1450 5575 2100
-Connection ~ 5575 2100
+	5575 1450 5575 2300
+Connection ~ 5575 2300
 Wire Wire Line
-	5575 2100 7725 2100
+	5575 2300 6650 2300
 Wire Wire Line
 	5875 1950 5250 1950
-Wire Wire Line
-	5250 1950 5250 1450
 Connection ~ 5875 1950
 Text GLabel 3700 6000 2    50   Input ~ 0
 SerialTapB
@@ -742,38 +725,124 @@ Wire Wire Line
 Connection ~ 3100 7350
 Wire Wire Line
 	3100 7350 2750 7350
-Text GLabel 4025 800  2    50   Input ~ 0
+Text GLabel 4025 650  2    50   Input ~ 0
 SerialTapA
 Wire Wire Line
-	2200 950  2700 950 
-Text GLabel 4025 1300 2    50   Input ~ 0
+	2200 800  2700 800 
+Text GLabel 4025 1525 2    50   Input ~ 0
 SerialTapB
 Wire Wire Line
-	4025 800  3900 800 
+	4025 650  3900 650 
 Wire Wire Line
-	3900 800  3900 950 
+	3900 650  3900 800 
 Wire Wire Line
-	3900 950  5875 950 
+	3900 800  4450 800 
 Wire Wire Line
-	4025 1300 3900 1300
+	4025 1525 3900 1525
 Wire Wire Line
-	3900 1300 3900 1450
-Connection ~ 3900 1450
+	3900 1525 3900 1650
+Connection ~ 3900 1650
 Wire Wire Line
-	3900 1450 3750 1450
-Connection ~ 3900 950 
+	3900 1650 3750 1650
+Connection ~ 3900 800 
 Wire Wire Line
-	5250 1450 3900 1450
-Wire Wire Line
-	2200 950  2200 1450
-Connection ~ 2200 1450
-Wire Wire Line
-	2200 1450 2200 2350
-Connection ~ 5875 950 
-Text Notes 2300 1800 0    50   ~ 0
-JP1 and JP2 enable which side of the serial comms we’re snooping on.\nFor this project, both devices wait for eachother, so it’s fine to enable\nsnooping on both directions.
-Text Notes 6475 4425 0    50   ~ 0
-This circuit uses a PNP transistor since that’s what I had.\nThis is an adaptation of a few circuits I found, with NPN transistors.\nThe video switch circuit can be repeated as many times as you want.
-Text Notes 5725 5850 0    50   ~ 0
+	5250 1650 4450 1650
+Text Notes 575  1300 0    50   ~ 0
+JP1 - Snoop on LDP Commands\n          sent from the Apple ][\n\nJP2 - Micro can send to the LDP\n\nJP3 - Snoop on LDP Responses “R”\n\nJP4 - Micro can send to the Apple ][\n          (for ADTPro, etc)
+Text Notes 6475 4425 0    50   Italic 0
+This circuit uses a PNP transistor since that’s what I had.\nThis is an adaptation of a few circuits I found with NPN transistors.\nThe video switch circuit can be repeated as many times as you want.
+Text Notes 5725 5850 0    50   Italic 0
 Arduino UNO used since I had a spare.\nAny Arduino (Leonardo, Mega, Micro, etc)\nor other micro (PIC) can be used.
+Connection ~ 5875 800 
+$Comp
+L Device:Jumper JP2
+U 1 1 5F1DA2ED
+P 3800 1150
+F 0 "JP2" H 3550 1275 50  0000 C CNN
+F 1 "Select A Out" H 3800 1075 50  0000 C CNN
+F 2 "" H 3800 1150 50  0001 C CNN
+F 3 "~" H 3800 1150 50  0001 C CNN
+	1    3800 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Jumper JP4
+U 1 1 5F1DB0BF
+P 3825 2000
+F 0 "JP4" H 3575 2125 50  0000 C CNN
+F 1 "Select B Out" H 3825 1925 50  0000 C CNN
+F 2 "" H 3825 2000 50  0001 C CNN
+F 3 "~" H 3825 2000 50  0001 C CNN
+	1    3825 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 2775 2400 2000
+Wire Wire Line
+	2400 1150 3500 1150
+Wire Wire Line
+	3525 2000 2400 2000
+Wire Wire Line
+	4100 1150 4450 1150
+Wire Wire Line
+	4450 1150 4450 800 
+Connection ~ 4450 800 
+Wire Wire Line
+	4450 800  5875 800 
+Wire Wire Line
+	4125 2000 4450 2000
+Wire Wire Line
+	4450 2000 4450 1650
+Connection ~ 4450 1650
+Wire Wire Line
+	4450 1650 3900 1650
+Text Notes 4600 1050 0    50   ~ 0
+From ][c\nTo LDP\n(LDP Commands)
+Text Notes 4575 1925 0    50   ~ 0
+From LDP\nTo ][c\n(LDP Responses)
+Text Notes 675  2275 0    50   ~ 0
+       VS    AD   LD\nJP1:  ON    ON   OFF\nJP2:  OFF   OFF  ON\nJP3:  ON    OFF  ON\nJP4:  OFF   ON   OFF\n\nVS: Video Switch Mode\nAD: ADTPro Mode  (Unplug LDP)\nLD: LDP Command Mode (Unplug ][c)
+Text Notes 2100 3925 0    50   ~ 0
+6 DSR\n7 RTS\n8 CTS\n9 RI
+Wire Wire Line
+	4600 3750 3800 3750
+$Comp
+L power:GNDS #PWR?
+U 1 1 5F278061
+P 6650 2450
+F 0 "#PWR?" H 6650 2200 50  0001 C CNN
+F 1 "GNDS" H 6655 2277 50  0000 C CNN
+F 2 "" H 6650 2450 50  0001 C CNN
+F 3 "" H 6650 2450 50  0001 C CNN
+	1    6650 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 2450 6650 2300
+Wire Wire Line
+	6650 2300 7725 2300
+$Comp
+L power:GNDS #PWR?
+U 1 1 5F284244
+P 3700 6300
+F 0 "#PWR?" H 3700 6050 50  0001 C CNN
+F 1 "GNDS" V 3705 6172 50  0000 R CNN
+F 2 "" H 3700 6300 50  0001 C CNN
+F 3 "" H 3700 6300 50  0001 C CNN
+	1    3700 6300
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6650 2300
+Connection ~ 2200 1650
+Wire Wire Line
+	2200 1650 2200 2775
+Connection ~ 2400 2000
+Wire Wire Line
+	5250 1650 5250 1950
+Wire Wire Line
+	2200 800  2200 1650
+Wire Wire Line
+	2400 1150 2400 2000
+Text Notes 6275 6725 0    50   Italic 0
+Component Notes:\n- D1, D2, D3, D4 can be any similar diodes\n- Q1, Q2 can be any switching PNP transistor
 $EndSCHEMATC

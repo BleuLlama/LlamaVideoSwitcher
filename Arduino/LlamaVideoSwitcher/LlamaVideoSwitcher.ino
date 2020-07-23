@@ -24,20 +24,27 @@ SoftwareSerial mySerial(2,3); // RX, TX
 
 int vinput = 0;
 
-
 void VideoSelect( int i )
 {
   if( i == 0 ) {
+    vinput = 0;
     strip.setPixelColor(0, strip.Color( 16, 0, 0 ));
     strip.show();
     digitalWrite( kVideo_0, HIGH );
     digitalWrite( kVideo_1, LOW );
   } else {
+    vinput = 1;
     strip.setPixelColor(0, strip.Color( 16, 16, 16 ));
     strip.show();
     digitalWrite( kVideo_0, LOW );
     digitalWrite( kVideo_1, HIGH );
   }
+}
+
+void VideoToggle()
+{
+  if( vinput ) { VideoSelect( 0 ); }
+  else         { VideoSelect( 1 ); }
 }
 
 void setup() {
@@ -72,15 +79,33 @@ int accpos = 0;
 
 void serial_gotline()
 {
-  Serial.print( "RX Line: ");
+  Serial.print( "RX: ");
   Serial.println( acc );
   accpos = 0;
 
+  if( !strcmp( acc, "XRV") ) {
+    VideoToggle();
+    Serial.println( "    Swap Video Source" );
+  }
+
+  if( !strcmp( acc, "0RV") ) {
+    VideoSelect( 0 );
+    Serial.println( "    Video 0: ][c" );
+  }
+
+
+  if( !strcmp( acc, "1RV") ) {
+    VideoSelect( 1 );
+    Serial.println( "    Video 1: LDP" );
+  }
+
+  /*
   if( !strcmp( acc, "R" )) {
       VideoSelect( 0 );
   } else {
       VideoSelect( 1 );
   }
+  */
 }
 
 void serial_loop()
