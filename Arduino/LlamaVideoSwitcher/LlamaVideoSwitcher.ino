@@ -5,6 +5,7 @@
 
 
 #define kLED_NeoPixel    (4)
+#define kLED_LED (A0)
 
 #define kButton_Action  (5)
 
@@ -22,6 +23,18 @@ SoftwareSerial mySerial(2,3); // RX, TX
 // or ATmega 168/
 
 
+void led_blink( int count )
+{
+  for( int i=0 ; i < count ; i++ )
+  {
+    digitalWrite( kLED_LED, HIGH );
+    delay( 75 );
+    digitalWrite( kLED_LED, LOW );
+    if( i < count-1 ) delay( 75 );
+  }
+}
+
+
 int vinput = 0;
 
 void VideoSelect( int i )
@@ -32,12 +45,14 @@ void VideoSelect( int i )
     strip.show();
     digitalWrite( kVideo_0, HIGH );
     digitalWrite( kVideo_1, LOW );
+    led_blink( 1 );
   } else {
     vinput = 1;
     strip.setPixelColor(0, strip.Color( 16, 16, 16 ));
     strip.show();
     digitalWrite( kVideo_0, LOW );
     digitalWrite( kVideo_1, HIGH );
+    led_blink( 2 );
   }
 }
 
@@ -48,6 +63,10 @@ void VideoToggle()
 }
 
 void setup() {
+  // setup LED
+  pinMode( kLED_LED, OUTPUT );
+  digitalWrite( kLED_LED, LOW ); // LED ON!
+
   // initialize Neopixel
   strip.begin();           // INITIALIZE NeoPixel strip object (REQUIRED)
   strip.show();            // Turn OFF all pixels ASAP
@@ -64,18 +83,19 @@ void setup() {
   // initialize button
   pinMode( kButton_Action, INPUT_PULLUP );
 
+
   // start up the second serial port at 4800 baud to
   // match the 
   mySerial.begin( 4800 );  // 4800 baud 8N1
 
   Serial.begin( 115200 );
   Serial.println( "Ready." );
-
 }
 
 #define kAccLen   (20)
 char acc[kAccLen];
 int accpos = 0;
+
 
 void serial_gotline()
 {
@@ -98,14 +118,6 @@ void serial_gotline()
     VideoSelect( 1 );
     Serial.println( "    Video 1: LDP" );
   }
-
-  /*
-  if( !strcmp( acc, "R" )) {
-      VideoSelect( 0 );
-  } else {
-      VideoSelect( 1 );
-  }
-  */
 }
 
 void serial_loop()
@@ -118,8 +130,14 @@ void serial_loop()
         serial_gotline();
       } else {
         acc[ accpos++ ] = ch;
-        
       }
+    }
+  }
+
+  if( Serial.available() ) {
+    while( Serial.available() ) {
+      char ch2 = Serial.read();
+      mySerial.write( ch2 );
     }
   }
 }
@@ -128,6 +146,7 @@ void serial_loop()
 void button_loop()
 {
   if( digitalRead( kButton_Action ) == LOW ) {
+    delay( 50 ); // cheezo debounce 
     while( digitalRead( kButton_Action ) == LOW );
     vinput++;
     VideoSelect( vinput & 1 );
