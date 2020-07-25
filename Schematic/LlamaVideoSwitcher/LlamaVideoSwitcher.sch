@@ -6,8 +6,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "LlamaVideoSwitcher"
-Date "2020-07-23"
-Rev "1.3"
+Date "2020-07-25"
+Rev "1.4"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -151,39 +151,39 @@ DE9 Serial Pinout\n(Male on PC)\n1 CD\n2 RX\n3 TX\n4 DTR\n5 GND
 $Comp
 L Connector:Conn_Coaxial J7
 U 1 1 5F18184E
-P 9800 3075
-F 0 "J7" H 9700 3300 50  0000 C CNN
-F 1 "Video 0 In: ][c" H 9850 3200 50  0000 C CNN
-F 2 "" H 9800 3075 50  0001 C CNN
-F 3 " ~" H 9800 3075 50  0001 C CNN
-	1    9800 3075
+P 10050 3100
+F 0 "J7" H 9950 3325 50  0000 C CNN
+F 1 "Video 0 In: ][c" H 10100 3225 50  0000 C CNN
+F 2 "" H 10050 3100 50  0001 C CNN
+F 3 " ~" H 10050 3100 50  0001 C CNN
+	1    10050 3100
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R1
 U 1 1 5F181B4A
-P 7750 2925
-F 0 "R1" V 7543 2925 50  0000 C CNN
-F 1 "1K" V 7634 2925 50  0000 C CNN
-F 2 "" V 7680 2925 50  0001 C CNN
-F 3 "~" H 7750 2925 50  0001 C CNN
-	1    7750 2925
+P 7750 2950
+F 0 "R1" V 7543 2950 50  0000 C CNN
+F 1 "1K" V 7634 2950 50  0000 C CNN
+F 2 "" V 7680 2950 50  0001 C CNN
+F 3 "~" H 7750 2950 50  0001 C CNN
+	1    7750 2950
 	0    1    1    0   
 $EndComp
 $Comp
 L Connector:Conn_Coaxial J8
 U 1 1 5F183C6B
-P 9800 4550
-F 0 "J8" H 9675 4800 50  0000 L CNN
-F 1 "Video Output" H 9650 4700 50  0000 L CNN
-F 2 "" H 9800 4550 50  0001 C CNN
-F 3 " ~" H 9800 4550 50  0001 C CNN
-	1    9800 4550
+P 10050 4550
+F 0 "J8" H 9925 4800 50  0000 L CNN
+F 1 "Video Output" H 9900 4700 50  0000 L CNN
+F 2 "" H 10050 4550 50  0001 C CNN
+F 3 " ~" H 10050 4550 50  0001 C CNN
+	1    10050 4550
 	1    0    0    -1  
 $EndComp
-Text GLabel 7400 2925 0    50   Input ~ 0
+Text GLabel 7400 2950 0    50   Input ~ 0
 Vid0Select
-Text GLabel 7400 5225 0    50   Input ~ 0
+Text GLabel 7400 4800 0    50   Input ~ 0
 Vid1Select
 Text GLabel 4750 4550 0    50   Input ~ 0
 Vid0Select
@@ -339,42 +339,40 @@ If using a 9 pin cable for the tap instead of Apple ][c DIN, use this.
 $Comp
 L Device:Q_PNP_CBE Q1
 U 1 1 5F1950B9
-P 8350 2925
-F 0 "Q1" H 8541 2879 50  0000 L CNN
-F 1 "2N3906" H 8541 2970 50  0000 L CNN
-F 2 "" H 8550 3025 50  0001 C CNN
-F 3 "~" H 8350 2925 50  0001 C CNN
-	1    8350 2925
+P 8350 2950
+F 0 "Q1" H 8541 2904 50  0000 L CNN
+F 1 "2N3906" H 8541 2995 50  0000 L CNN
+F 2 "" H 8550 3050 50  0001 C CNN
+F 3 "~" H 8350 2950 50  0001 C CNN
+	1    8350 2950
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:D D3
 U 1 1 5F1953CC
-P 8450 3525
-F 0 "D3" V 8475 3175 50  0000 L CNN
-F 1 "1N4001" V 8575 3175 50  0000 L CNN
-F 2 "" H 8450 3525 50  0001 C CNN
-F 3 "~" H 8450 3525 50  0001 C CNN
-	1    8450 3525
+P 8450 3550
+F 0 "D3" V 8475 3200 50  0000 L CNN
+F 1 "1N4001" V 8575 3200 50  0000 L CNN
+F 2 "" H 8450 3550 50  0001 C CNN
+F 3 "~" H 8450 3550 50  0001 C CNN
+	1    8450 3550
 	0    1    1    0   
 $EndComp
 $Comp
 L Relay:MSxx-1Axx-75 K1
 U 1 1 5F198F91
-P 9100 3525
-F 0 "K1" H 8700 3875 50  0000 L CNN
-F 1 "5V Reed" H 8500 3800 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 9450 3475 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 9100 3525 50  0001 C CNN
-	1    9100 3525
+P 9100 3550
+F 0 "K1" H 8700 3900 50  0000 L CNN
+F 1 "5V Reed" H 8500 3825 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 9450 3500 50  0001 L CNN
+F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 9100 3550 50  0001 C CNN
+	1    9100 3550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 3075 9300 3225
+	9300 3100 9300 3250
 Wire Wire Line
-	9300 3825 9300 4550
-Wire Wire Line
-	9300 4550 9600 4550
+	9300 3850 9300 4550
 $Comp
 L power:GND #PWR011
 U 1 1 5F1A144B
@@ -387,33 +385,31 @@ F 3 "" H 8900 4025 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 3825 8900 3925
+	8900 3850 8900 3950
 Wire Wire Line
-	8450 3675 8450 3925
+	8450 3700 8450 3950
 Wire Wire Line
-	8450 3925 8900 3925
+	8450 3950 8900 3950
 Wire Wire Line
-	8900 3925 8900 4025
+	8450 3400 8450 3150
 Wire Wire Line
-	8450 3375 8450 3125
+	8450 3150 8900 3150
 Wire Wire Line
-	8450 3125 8900 3125
+	8900 3150 8900 3250
+Connection ~ 8450 3150
 Wire Wire Line
-	8900 3125 8900 3225
-Connection ~ 8450 3125
+	8150 2950 7950 2950
 Wire Wire Line
-	8150 2925 7950 2925
-Wire Wire Line
-	7600 2925 7400 2925
+	7600 2950 7400 2950
 $Comp
 L power:+5V #PWR09
 U 1 1 5F1B4A9E
-P 8450 2425
-F 0 "#PWR09" H 8450 2275 50  0001 C CNN
-F 1 "+5V" H 8465 2598 50  0000 C CNN
-F 2 "" H 8450 2425 50  0001 C CNN
-F 3 "" H 8450 2425 50  0001 C CNN
-	1    8450 2425
+P 8450 2450
+F 0 "#PWR09" H 8450 2300 50  0001 C CNN
+F 1 "+5V" H 8465 2623 50  0000 C CNN
+F 2 "" H 8450 2450 50  0001 C CNN
+F 3 "" H 8450 2450 50  0001 C CNN
+	1    8450 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -421,198 +417,191 @@ Wire Wire Line
 $Comp
 L Device:R R3
 U 1 1 5F1C2622
-P 8200 2525
-F 0 "R3" V 7993 2525 50  0000 C CNN
-F 1 "10K" V 8084 2525 50  0000 C CNN
-F 2 "" V 8130 2525 50  0001 C CNN
-F 3 "~" H 8200 2525 50  0001 C CNN
-	1    8200 2525
+P 8200 2550
+F 0 "R3" V 7993 2550 50  0000 C CNN
+F 1 "10K" V 8084 2550 50  0000 C CNN
+F 2 "" V 8130 2550 50  0001 C CNN
+F 3 "~" H 8200 2550 50  0001 C CNN
+	1    8200 2550
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8350 2525 8450 2525
+	8350 2550 8450 2550
 Wire Wire Line
-	8450 2425 8450 2525
-Connection ~ 8450 2525
+	8450 2450 8450 2550
+Connection ~ 8450 2550
 Wire Wire Line
-	8450 2525 8450 2725
+	8450 2550 8450 2750
 Wire Wire Line
-	8050 2525 7950 2525
+	8050 2550 7950 2550
 Wire Wire Line
-	7950 2525 7950 2925
-Connection ~ 7950 2925
+	7950 2550 7950 2950
+Connection ~ 7950 2950
 Wire Wire Line
-	7950 2925 7900 2925
+	7950 2950 7900 2950
 Wire Wire Line
-	9300 3075 9600 3075
+	9300 3100 9700 3100
 Wire Wire Line
-	9800 3275 9800 3375
+	10050 3300 10050 3400
 $Comp
 L power:GNDA #PWR013
 U 1 1 5F1CF3A7
-P 9800 3375
-F 0 "#PWR013" H 9800 3125 50  0001 C CNN
-F 1 "GNDA" H 9805 3202 50  0000 C CNN
-F 2 "" H 9800 3375 50  0001 C CNN
-F 3 "" H 9800 3375 50  0001 C CNN
-	1    9800 3375
+P 10050 3400
+F 0 "#PWR013" H 10050 3150 50  0001 C CNN
+F 1 "GNDA" H 10055 3227 50  0000 C CNN
+F 2 "" H 10050 3400 50  0001 C CNN
+F 3 "" H 10050 3400 50  0001 C CNN
+	1    10050 3400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector:Conn_Coaxial J9
 U 1 1 5F221A2D
-P 9800 6200
-F 0 "J9" H 9700 6425 50  0000 C CNN
-F 1 "Video 1 In: LDP" H 9850 6325 50  0000 C CNN
-F 2 "" H 9800 6200 50  0001 C CNN
-F 3 " ~" H 9800 6200 50  0001 C CNN
-	1    9800 6200
+P 9800 5800
+F 0 "J9" H 9700 6025 50  0000 C CNN
+F 1 "Video 1 In: LDP" H 9850 5925 50  0000 C CNN
+F 2 "" H 9800 5800 50  0001 C CNN
+F 3 " ~" H 9800 5800 50  0001 C CNN
+	1    9800 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R2
 U 1 1 5F221A33
-P 7750 5225
-F 0 "R2" V 7543 5225 50  0000 C CNN
-F 1 "1K" V 7634 5225 50  0000 C CNN
-F 2 "" V 7680 5225 50  0001 C CNN
-F 3 "~" H 7750 5225 50  0001 C CNN
-	1    7750 5225
+P 7750 4800
+F 0 "R2" V 7543 4800 50  0000 C CNN
+F 1 "1K" V 7634 4800 50  0000 C CNN
+F 2 "" V 7680 4800 50  0001 C CNN
+F 3 "~" H 7750 4800 50  0001 C CNN
+	1    7750 4800
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:Q_PNP_CBE Q2
 U 1 1 5F221A3F
-P 8350 5225
-F 0 "Q2" H 8541 5179 50  0000 L CNN
-F 1 "2N3906" H 8541 5270 50  0000 L CNN
-F 2 "" H 8550 5325 50  0001 C CNN
-F 3 "~" H 8350 5225 50  0001 C CNN
-	1    8350 5225
+P 8350 4800
+F 0 "Q2" H 8541 4754 50  0000 L CNN
+F 1 "2N3906" H 8541 4845 50  0000 L CNN
+F 2 "" H 8550 4900 50  0001 C CNN
+F 3 "~" H 8350 4800 50  0001 C CNN
+	1    8350 4800
 	1    0    0    1   
 $EndComp
 $Comp
 L Device:D D4
 U 1 1 5F221A45
-P 8450 5825
-F 0 "D4" V 8450 5475 50  0000 L CNN
-F 1 "1N4001" V 8550 5475 50  0000 L CNN
-F 2 "" H 8450 5825 50  0001 C CNN
-F 3 "~" H 8450 5825 50  0001 C CNN
-	1    8450 5825
+P 8450 5400
+F 0 "D4" V 8450 5050 50  0000 L CNN
+F 1 "1N4001" V 8550 5050 50  0000 L CNN
+F 2 "" H 8450 5400 50  0001 C CNN
+F 3 "~" H 8450 5400 50  0001 C CNN
+	1    8450 5400
 	0    1    1    0   
 $EndComp
 $Comp
 L Relay:MSxx-1Axx-75 K2
 U 1 1 5F221A4B
-P 9100 5825
-F 0 "K2" H 8700 6175 50  0000 L CNN
-F 1 "5V Reed" H 8500 6100 50  0000 L CNN
-F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 9450 5775 50  0001 L CNN
-F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 9100 5825 50  0001 C CNN
-	1    9100 5825
+P 9100 5400
+F 0 "K2" H 8700 5750 50  0000 L CNN
+F 1 "5V Reed" H 8500 5675 50  0000 L CNN
+F 2 "Relay_THT:Relay_SPST_StandexMeder_MS_Form1AB" H 9450 5350 50  0001 L CNN
+F 3 "https://standexelectronics.com/de/produkte/ms-reed-relais/" H 9100 5400 50  0001 C CNN
+	1    9100 5400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR012
 U 1 1 5F221A54
-P 8900 6325
-F 0 "#PWR012" H 8900 6075 50  0001 C CNN
-F 1 "GND" H 8905 6152 50  0000 C CNN
-F 2 "" H 8900 6325 50  0001 C CNN
-F 3 "" H 8900 6325 50  0001 C CNN
-	1    8900 6325
+P 8900 5900
+F 0 "#PWR012" H 8900 5650 50  0001 C CNN
+F 1 "GND" H 8905 5727 50  0000 C CNN
+F 2 "" H 8900 5900 50  0001 C CNN
+F 3 "" H 8900 5900 50  0001 C CNN
+	1    8900 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8900 6125 8900 6225
+	8450 5550 8450 5800
 Wire Wire Line
-	8450 5975 8450 6225
+	8450 5800 8900 5800
 Wire Wire Line
-	8450 6225 8900 6225
-Connection ~ 8900 6225
+	8450 5250 8450 5000
 Wire Wire Line
-	8900 6225 8900 6325
+	8450 5000 8900 5000
 Wire Wire Line
-	8450 5675 8450 5425
+	8900 5000 8900 5100
+Connection ~ 8450 5000
 Wire Wire Line
-	8450 5425 8900 5425
+	8150 4800 7950 4800
 Wire Wire Line
-	8900 5425 8900 5525
-Connection ~ 8450 5425
-Wire Wire Line
-	8150 5225 7950 5225
-Wire Wire Line
-	7600 5225 7400 5225
+	7600 4800 7400 4800
 $Comp
 L power:+5V #PWR010
 U 1 1 5F221A65
-P 8450 4725
-F 0 "#PWR010" H 8450 4575 50  0001 C CNN
-F 1 "+5V" H 8465 4898 50  0000 C CNN
-F 2 "" H 8450 4725 50  0001 C CNN
-F 3 "" H 8450 4725 50  0001 C CNN
-	1    8450 4725
+P 8450 4300
+F 0 "#PWR010" H 8450 4150 50  0001 C CNN
+F 1 "+5V" H 8465 4473 50  0000 C CNN
+F 2 "" H 8450 4300 50  0001 C CNN
+F 3 "" H 8450 4300 50  0001 C CNN
+	1    8450 4300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R4
 U 1 1 5F221A6B
-P 8200 4825
-F 0 "R4" V 7993 4825 50  0000 C CNN
-F 1 "10K" V 8084 4825 50  0000 C CNN
-F 2 "" V 8130 4825 50  0001 C CNN
-F 3 "~" H 8200 4825 50  0001 C CNN
-	1    8200 4825
+P 8200 4400
+F 0 "R4" V 7993 4400 50  0000 C CNN
+F 1 "10K" V 8084 4400 50  0000 C CNN
+F 2 "" V 8130 4400 50  0001 C CNN
+F 3 "~" H 8200 4400 50  0001 C CNN
+	1    8200 4400
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	8350 4825 8450 4825
+	8350 4400 8450 4400
 Wire Wire Line
-	8450 4725 8450 4825
-Connection ~ 8450 4825
+	8450 4300 8450 4400
+Connection ~ 8450 4400
 Wire Wire Line
-	8450 4825 8450 5025
+	8450 4400 8450 4600
 Wire Wire Line
-	8050 4825 7950 4825
+	8050 4400 7950 4400
 Wire Wire Line
-	7950 4825 7950 5225
-Connection ~ 7950 5225
+	7950 4400 7950 4800
+Connection ~ 7950 4800
 Wire Wire Line
-	7950 5225 7900 5225
+	7950 4800 7900 4800
 Wire Wire Line
-	9800 6400 9800 6500
+	9800 6000 9800 6050
 $Comp
 L power:GNDA #PWR015
 U 1 1 5F221A7B
-P 9800 6500
-F 0 "#PWR015" H 9800 6250 50  0001 C CNN
-F 1 "GNDA" H 9805 6327 50  0000 C CNN
-F 2 "" H 9800 6500 50  0001 C CNN
-F 3 "" H 9800 6500 50  0001 C CNN
-	1    9800 6500
+P 9800 6050
+F 0 "#PWR015" H 9800 5800 50  0001 C CNN
+F 1 "GNDA" H 9805 5877 50  0000 C CNN
+F 2 "" H 9800 6050 50  0001 C CNN
+F 3 "" H 9800 6050 50  0001 C CNN
+	1    9800 6050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9300 6125 9300 6200
+	9300 5700 9300 5800
 Wire Wire Line
-	9300 6200 9600 6200
+	9300 5800 9600 5800
 $Comp
 L power:GNDA #PWR014
 U 1 1 5F22DB31
-P 9800 4850
-F 0 "#PWR014" H 9800 4600 50  0001 C CNN
-F 1 "GNDA" H 9805 4677 50  0000 C CNN
-F 2 "" H 9800 4850 50  0001 C CNN
-F 3 "" H 9800 4850 50  0001 C CNN
-	1    9800 4850
+P 10050 4850
+F 0 "#PWR014" H 10050 4600 50  0001 C CNN
+F 1 "GNDA" H 10055 4677 50  0000 C CNN
+F 2 "" H 10050 4850 50  0001 C CNN
+F 3 "" H 10050 4850 50  0001 C CNN
+	1    10050 4850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9800 4750 9800 4850
-Wire Wire Line
-	9300 4550 9300 5525
-Connection ~ 8900 3925
+	10050 4750 10050 4850
+Connection ~ 8900 3950
 Connection ~ 9300 4550
 $Comp
 L Device:Jumper JP1
@@ -649,33 +638,33 @@ Wire Wire Line
 Wire Wire Line
 	3050 4350 4950 4350
 $Comp
-L Device:Jumper JP3
+L Device:Jumper JP2
 U 1 1 5F2586D3
-P 3450 1650
-F 0 "JP3" H 3200 1775 50  0000 C CNN
-F 1 "Select B In" H 3450 1575 50  0000 C CNN
-F 2 "" H 3450 1650 50  0001 C CNN
-F 3 "~" H 3450 1650 50  0001 C CNN
-	1    3450 1650
+P 3450 1950
+F 0 "JP2" H 3200 2075 50  0000 C CNN
+F 1 "Select B In" H 3450 1875 50  0000 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "~" H 3450 1950 50  0001 C CNN
+	1    3450 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 5F2586D9
-P 2850 1650
-F 0 "D2" H 2775 1825 50  0000 R CNN
-F 1 "1N4918" H 2975 1750 50  0000 R CNN
-F 2 "" H 2850 1650 50  0001 C CNN
-F 3 "~" H 2850 1650 50  0001 C CNN
-	1    2850 1650
+P 2850 1950
+F 0 "D2" H 2775 2125 50  0000 R CNN
+F 1 "1N4918" H 2975 2050 50  0000 R CNN
+F 2 "" H 2850 1950 50  0001 C CNN
+F 3 "~" H 2850 1950 50  0001 C CNN
+	1    2850 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3000 800  3150 800 
 Wire Wire Line
-	2700 1650 2200 1650
+	2700 1950 2200 1950
 Wire Wire Line
-	3000 1650 3150 1650
+	3000 1950 3150 1950
 Wire Wire Line
 	7725 1450 7625 1450
 Wire Wire Line
@@ -713,8 +702,6 @@ Wire Wire Line
 Connection ~ 5575 2300
 Wire Wire Line
 	5575 2300 6650 2300
-Wire Wire Line
-	5875 1950 5250 1950
 Connection ~ 5875 1950
 Text GLabel 3700 6000 2    50   Input ~ 0
 SerialTapB
@@ -729,88 +716,40 @@ Text GLabel 4025 650  2    50   Input ~ 0
 SerialTapA
 Wire Wire Line
 	2200 800  2700 800 
-Text GLabel 4025 1525 2    50   Input ~ 0
+Text GLabel 4025 1825 2    50   Input ~ 0
 SerialTapB
 Wire Wire Line
 	4025 650  3900 650 
 Wire Wire Line
 	3900 650  3900 800 
 Wire Wire Line
-	3900 800  4450 800 
+	4025 1825 3900 1825
 Wire Wire Line
-	4025 1525 3900 1525
+	3900 1825 3900 1950
+Connection ~ 3900 1950
 Wire Wire Line
-	3900 1525 3900 1650
-Connection ~ 3900 1650
-Wire Wire Line
-	3900 1650 3750 1650
+	3900 1950 3750 1950
 Connection ~ 3900 800 
-Wire Wire Line
-	5250 1650 4450 1650
-Text Notes 575  1300 0    50   ~ 0
-JP1 - Snoop on LDP Commands\n          sent from the Apple ][\n\nJP2 - Micro can send to the LDP\n\nJP3 - Snoop on LDP Responses “R”\n\nJP4 - Micro can send to the Apple ][\n          (for ADTPro, etc)
-Text Notes 6475 4425 0    50   Italic 0
+Text Notes 2300 1500 0    50   ~ 0
+JP1 - Snoop on LDP Commands sent from the Apple ][\nJP2 - Snoop on LDP Responses “R”\n(both can be enabled)
+Text Notes 7750 6575 0    50   Italic 0
 This circuit uses a PNP transistor since that’s what I had.\nThis is an adaptation of a few circuits I found with NPN transistors.\nThe video switch circuit can be repeated as many times as you want.
 Text Notes 5725 5850 0    50   Italic 0
 Arduino UNO used since I had a spare.\nAny Arduino (Leonardo, Mega, Micro, etc)\nor other micro (PIC) can be used.
 Connection ~ 5875 800 
-$Comp
-L Device:Jumper JP2
-U 1 1 5F1DA2ED
-P 3800 1150
-F 0 "JP2" H 3550 1275 50  0000 C CNN
-F 1 "Select A Out" H 3800 1075 50  0000 C CNN
-F 2 "" H 3800 1150 50  0001 C CNN
-F 3 "~" H 3800 1150 50  0001 C CNN
-	1    3800 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP4
-U 1 1 5F1DB0BF
-P 3825 2000
-F 0 "JP4" H 3575 2125 50  0000 C CNN
-F 1 "Select B Out" H 3825 1925 50  0000 C CNN
-F 2 "" H 3825 2000 50  0001 C CNN
-F 3 "~" H 3825 2000 50  0001 C CNN
-	1    3825 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2400 2775 2400 2000
-Wire Wire Line
-	2400 1150 3500 1150
-Wire Wire Line
-	3525 2000 2400 2000
-Wire Wire Line
-	4100 1150 4450 1150
-Wire Wire Line
-	4450 1150 4450 800 
-Connection ~ 4450 800 
-Wire Wire Line
-	4450 800  5875 800 
-Wire Wire Line
-	4125 2000 4450 2000
-Wire Wire Line
-	4450 2000 4450 1650
-Connection ~ 4450 1650
-Wire Wire Line
-	4450 1650 3900 1650
-Text Notes 4600 1050 0    50   ~ 0
+Text Notes 4500 1075 0    50   ~ 0
 From ][c\nTo LDP\n(LDP Commands)
-Text Notes 4575 1925 0    50   ~ 0
+Text Notes 4525 1900 0    50   ~ 0
 From LDP\nTo ][c\n(LDP Responses)
-Text Notes 675  2275 0    50   ~ 0
-       VS    AD   LD\nJP1:  ON    ON   OFF\nJP2:  OFF   OFF  ON\nJP3:  ON    OFF  ON\nJP4:  OFF   ON   OFF\n\nVS: Video Switch Mode\nAD: ADTPro Mode  (Unplug LDP)\nLD: LDP Command Mode (Unplug ][c)
 Text Notes 2100 3925 0    50   ~ 0
 6 DSR\n7 RTS\n8 CTS\n9 RI
 Wire Wire Line
 	4600 3750 3800 3750
 $Comp
-L power:GNDS #PWR?
+L power:GNDS #PWR017
 U 1 1 5F278061
 P 6650 2450
-F 0 "#PWR?" H 6650 2200 50  0001 C CNN
+F 0 "#PWR017" H 6650 2200 50  0001 C CNN
 F 1 "GNDS" H 6655 2277 50  0000 C CNN
 F 2 "" H 6650 2450 50  0001 C CNN
 F 3 "" H 6650 2450 50  0001 C CNN
@@ -822,10 +761,10 @@ Wire Wire Line
 Wire Wire Line
 	6650 2300 7725 2300
 $Comp
-L power:GNDS #PWR?
+L power:GNDS #PWR06
 U 1 1 5F284244
 P 3700 6300
-F 0 "#PWR?" H 3700 6050 50  0001 C CNN
+F 0 "#PWR06" H 3700 6050 50  0001 C CNN
 F 1 "GNDS" V 3705 6172 50  0000 R CNN
 F 2 "" H 3700 6300 50  0001 C CNN
 F 3 "" H 3700 6300 50  0001 C CNN
@@ -833,16 +772,89 @@ F 3 "" H 3700 6300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 6650 2300
-Connection ~ 2200 1650
-Wire Wire Line
-	2200 1650 2200 2775
-Connection ~ 2400 2000
-Wire Wire Line
-	5250 1650 5250 1950
-Wire Wire Line
-	2200 800  2200 1650
-Wire Wire Line
-	2400 1150 2400 2000
-Text Notes 6275 6725 0    50   Italic 0
+Text Notes 6325 7050 0    50   Italic 0
 Component Notes:\n- D1, D2, D3, D4 can be any similar diodes\n- Q1, Q2 can be any switching PNP transistor
+Wire Wire Line
+	3900 800  5875 800 
+NoConn ~ 2400 2775
+Connection ~ 2200 1950
+Wire Wire Line
+	2200 1950 2200 2775
+Wire Wire Line
+	2200 800  2200 1950
+Wire Wire Line
+	3900 1950 5875 1950
+$Comp
+L Device:LED_ALT LED2
+U 1 1 5F1E9CFC
+P 6300 4550
+F 0 "LED2" H 6291 4295 50  0000 C CNN
+F 1 "Indicator" H 6291 4386 50  0000 C CNN
+F 2 "" H 6300 4550 50  0001 C CNN
+F 3 "~" H 6300 4550 50  0001 C CNN
+	1    6300 4550
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F1F61AE
+P 6600 4250
+F 0 "R5" H 6500 4100 50  0000 C CNN
+F 1 "220R" H 6450 4175 50  0000 C CNN
+F 2 "" V 6530 4250 50  0001 C CNN
+F 3 "~" H 6600 4250 50  0001 C CNN
+	1    6600 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR016
+U 1 1 5F1F6CD8
+P 6600 3875
+F 0 "#PWR016" H 6600 3725 50  0001 C CNN
+F 1 "+5V" H 6615 4048 50  0000 C CNN
+F 2 "" H 6600 3875 50  0001 C CNN
+F 3 "" H 6600 3875 50  0001 C CNN
+	1    6600 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 3875 6600 4100
+Wire Wire Line
+	6600 4400 6600 4550
+Wire Wire Line
+	6600 4550 6450 4550
+Wire Wire Line
+	6150 4550 5950 4550
+Wire Wire Line
+	8900 3950 8900 4025
+Wire Wire Line
+	9300 4550 9300 5100
+$Comp
+L Switch:SW_SPST SW2
+U 1 1 5F2382B5
+P 9700 3850
+F 0 "SW2" V 9654 3948 50  0000 L CNN
+F 1 "Bypass" V 9745 3948 50  0000 L CNN
+F 2 "" H 9700 3850 50  0001 C CNN
+F 3 "" H 9700 3850 50  0001 C CNN
+	1    9700 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9700 3650 9700 3100
+Connection ~ 9700 3100
+Wire Wire Line
+	9700 3100 9850 3100
+Wire Wire Line
+	9700 4050 9700 4550
+Wire Wire Line
+	9300 4550 9700 4550
+Connection ~ 9700 4550
+Wire Wire Line
+	9700 4550 9850 4550
+Wire Wire Line
+	8900 5700 8900 5800
+Connection ~ 8900 5800
+Wire Wire Line
+	8900 5800 8900 5900
 $EndSCHEMATC

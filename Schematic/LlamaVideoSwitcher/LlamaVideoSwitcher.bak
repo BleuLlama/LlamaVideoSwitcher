@@ -6,8 +6,8 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "LlamaVideoSwitcher"
-Date "2020-07-23"
-Rev "1.3"
+Date "2020-07-25"
+Rev "1.4"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -36,7 +36,7 @@ F 3 "http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf" H 5975 1450 50  0001
 	1    5975 1450
 	0    -1   -1   0   
 $EndComp
-Text Notes 7650 1325 0    50   ~ 0
+Text Notes 7625 1250 0    50   ~ 0
 DIN 5/180 pinout\n1 DTR\n4 TX (from IIc)\n2 GND\n5 RX (to IIc)\n3 DSR
 Text Notes 7800 1950 0    50   Italic 0
 Notes:\n- Male DIN cable plugs into Apple ][c\n- Female DIN socket is for LD Player connection\n- Apple seems to label their port as 1,2,3,4,5 instead of 1,4,2,5,3\n- For the LD interface, only TX, RX and GND are needed.
@@ -649,33 +649,33 @@ Wire Wire Line
 Wire Wire Line
 	3050 4350 4950 4350
 $Comp
-L Device:Jumper JP3
+L Device:Jumper JP2
 U 1 1 5F2586D3
-P 3450 1650
-F 0 "JP3" H 3200 1775 50  0000 C CNN
-F 1 "Select B In" H 3450 1575 50  0000 C CNN
-F 2 "" H 3450 1650 50  0001 C CNN
-F 3 "~" H 3450 1650 50  0001 C CNN
-	1    3450 1650
+P 3450 1950
+F 0 "JP2" H 3200 2075 50  0000 C CNN
+F 1 "Select B In" H 3450 1875 50  0000 C CNN
+F 2 "" H 3450 1950 50  0001 C CNN
+F 3 "~" H 3450 1950 50  0001 C CNN
+	1    3450 1950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:D D2
 U 1 1 5F2586D9
-P 2850 1650
-F 0 "D2" H 2775 1825 50  0000 R CNN
-F 1 "1N4918" H 2975 1750 50  0000 R CNN
-F 2 "" H 2850 1650 50  0001 C CNN
-F 3 "~" H 2850 1650 50  0001 C CNN
-	1    2850 1650
+P 2850 1950
+F 0 "D2" H 2775 2125 50  0000 R CNN
+F 1 "1N4918" H 2975 2050 50  0000 R CNN
+F 2 "" H 2850 1950 50  0001 C CNN
+F 3 "~" H 2850 1950 50  0001 C CNN
+	1    2850 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3000 800  3150 800 
 Wire Wire Line
-	2700 1650 2200 1650
+	2700 1950 2200 1950
 Wire Wire Line
-	3000 1650 3150 1650
+	3000 1950 3150 1950
 Wire Wire Line
 	7725 1450 7625 1450
 Wire Wire Line
@@ -713,8 +713,6 @@ Wire Wire Line
 Connection ~ 5575 2300
 Wire Wire Line
 	5575 2300 6650 2300
-Wire Wire Line
-	5875 1950 5250 1950
 Connection ~ 5875 1950
 Text GLabel 3700 6000 2    50   Input ~ 0
 SerialTapB
@@ -729,79 +727,31 @@ Text GLabel 4025 650  2    50   Input ~ 0
 SerialTapA
 Wire Wire Line
 	2200 800  2700 800 
-Text GLabel 4025 1525 2    50   Input ~ 0
+Text GLabel 4025 1825 2    50   Input ~ 0
 SerialTapB
 Wire Wire Line
 	4025 650  3900 650 
 Wire Wire Line
 	3900 650  3900 800 
 Wire Wire Line
-	3900 800  4450 800 
+	4025 1825 3900 1825
 Wire Wire Line
-	4025 1525 3900 1525
+	3900 1825 3900 1950
+Connection ~ 3900 1950
 Wire Wire Line
-	3900 1525 3900 1650
-Connection ~ 3900 1650
-Wire Wire Line
-	3900 1650 3750 1650
+	3900 1950 3750 1950
 Connection ~ 3900 800 
-Wire Wire Line
-	5250 1650 4450 1650
-Text Notes 575  1300 0    50   ~ 0
-JP1 - Snoop on LDP Commands\n          sent from the Apple ][\n\nJP2 - Micro can send to the LDP\n\nJP3 - Snoop on LDP Responses “R”\n\nJP4 - Micro can send to the Apple ][\n          (for ADTPro, etc)
+Text Notes 2300 1500 0    50   ~ 0
+JP1 - Snoop on LDP Commands sent from the Apple ][\nJP2 - Snoop on LDP Responses “R”\n(both can be enabled)
 Text Notes 6475 4425 0    50   Italic 0
 This circuit uses a PNP transistor since that’s what I had.\nThis is an adaptation of a few circuits I found with NPN transistors.\nThe video switch circuit can be repeated as many times as you want.
 Text Notes 5725 5850 0    50   Italic 0
 Arduino UNO used since I had a spare.\nAny Arduino (Leonardo, Mega, Micro, etc)\nor other micro (PIC) can be used.
 Connection ~ 5875 800 
-$Comp
-L Device:Jumper JP2
-U 1 1 5F1DA2ED
-P 3800 1150
-F 0 "JP2" H 3550 1275 50  0000 C CNN
-F 1 "Select A Out" H 3800 1075 50  0000 C CNN
-F 2 "" H 3800 1150 50  0001 C CNN
-F 3 "~" H 3800 1150 50  0001 C CNN
-	1    3800 1150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Jumper JP4
-U 1 1 5F1DB0BF
-P 3825 2000
-F 0 "JP4" H 3575 2125 50  0000 C CNN
-F 1 "Select B Out" H 3825 1925 50  0000 C CNN
-F 2 "" H 3825 2000 50  0001 C CNN
-F 3 "~" H 3825 2000 50  0001 C CNN
-	1    3825 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2400 2775 2400 2000
-Wire Wire Line
-	2400 1150 3500 1150
-Wire Wire Line
-	3525 2000 2400 2000
-Wire Wire Line
-	4100 1150 4450 1150
-Wire Wire Line
-	4450 1150 4450 800 
-Connection ~ 4450 800 
-Wire Wire Line
-	4450 800  5875 800 
-Wire Wire Line
-	4125 2000 4450 2000
-Wire Wire Line
-	4450 2000 4450 1650
-Connection ~ 4450 1650
-Wire Wire Line
-	4450 1650 3900 1650
-Text Notes 4600 1050 0    50   ~ 0
+Text Notes 4500 1075 0    50   ~ 0
 From ][c\nTo LDP\n(LDP Commands)
-Text Notes 4575 1925 0    50   ~ 0
+Text Notes 4525 1900 0    50   ~ 0
 From LDP\nTo ][c\n(LDP Responses)
-Text Notes 675  2275 0    50   ~ 0
-       VS    AD   LD\nJP1:  ON    ON   OFF\nJP2:  OFF   OFF  ON\nJP3:  ON    OFF  ON\nJP4:  OFF   ON   OFF\n\nVS: Video Switch Mode\nAD: ADTPro Mode  (Unplug LDP)\nLD: LDP Command Mode (Unplug ][c)
 Text Notes 2100 3925 0    50   ~ 0
 6 DSR\n7 RTS\n8 CTS\n9 RI
 Wire Wire Line
@@ -833,14 +783,16 @@ F 3 "" H 3700 6300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Connection ~ 6650 2300
-Connection ~ 2200 1650
+Text Notes 6275 6725 0    50   Italic 0
+Component Notes:\n- D1, D2, D3, D4 can be any similar diodes\n- Q1, Q2 can be any switching PNP transistor
 Wire Wire Line
-	2200 1650 2200 2775
-Connection ~ 2400 2000
+	3900 800  5875 800 
+NoConn ~ 2400 2775
+Connection ~ 2200 1950
 Wire Wire Line
-	5250 1650 5250 1950
+	2200 1950 2200 2775
 Wire Wire Line
-	2200 800  2200 1650
+	2200 800  2200 1950
 Wire Wire Line
-	2400 1150 2400 2000
+	3900 1950 5875 1950
 $EndSCHEMATC
